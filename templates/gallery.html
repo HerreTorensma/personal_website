@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <title>Gallery</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <h1>Gallery</h1>
+
+    <p>This page has random pictures I found on the internet</p>
+
+    <div class="pictures">
+        {% for picture in pictures %}
+            <img src="{{ picture }}" alt="">
+        {% endfor %}
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>
