@@ -1,7 +1,6 @@
 ---
 title: "rarbg.to backup"
-slug: "rarbg_backup"
-date: 2023-08-08
+date: 2023-06-08
 tags: ["piracy"]
 ---
 

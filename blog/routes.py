@@ -14,9 +14,6 @@ def articles():
 
     all_tags = utils.get_all_tags(ARTICLES_DIRECTORY)
 
-    # Sort articles by date
-    articles.sort(key=lambda x: x["date"], reverse=True)
-
     return render_template("articles.html", articles=articles, all_tags=all_tags)
 
 @blog.route("/articles/<slug>")

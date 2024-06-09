@@ -10,20 +10,37 @@
 <body>
     {% include 'navbar.html' %}
 
-    <h1>tin1</h1>
+    <div id="stage">
 
-    <p>Welcome to my webpage</p>
+        <h1>tin1</h1>
 
-    <p>Interests</p>
+        <p>Welcome to my webpage</p>
+
+        <p>Interests</p>
+        <ul>
+            <li>C and assembly programming</li>
+            <li>Minimal web dev</li>
+            <li>Linux</li>
+            <li>Game development</li>
+            <li>Electronics</li>
+            <li>CRT displays</li>
+            <li>Old hardware</li>
+        </ul>
+    </div>
+
+    <p>Latest blog posts</p>
     <ul>
-        <li>C and assembly programming</li>
-        <li>Minimal web dev</li>
-        <li>Linux</li>
-        <li>Game development</li>
-        <li>Electronics</li>
-        <li>CRT displays</li>
-        <li>Old hardware</li>
+        {% for article in articles %}
+            <li>[{{ article.date }}] <a href="{{ url_for('blog.article', slug=article.slug) }}">{{ article.title }}</a></li>
+        {% endfor %}
+
+        <li><a href="{{ url_for('blog.articles') }}">[view more]</a></li>
     </ul>
+
+    <p>Most recent picture</p>
+
+    <a href="https://landchad.net/"><img src="/static/buttons/landchad.gif" alt="landchad.net"></a>
+    <a href="https://wiby.me/"><img src="/static/buttons/wiby.gif" alt="wiby.me"></a>
 
     {% include 'footer.html' %}
 </body>

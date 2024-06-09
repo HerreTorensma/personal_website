@@ -1,6 +1,5 @@
 ---
 title: a test bitch
-slug: "test"
 tags: [tech, something]
 date: 2024-06-08
 ---

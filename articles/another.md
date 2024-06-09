@@ -1,6 +1,5 @@
 ---
 title: antoher
-slug: "another"
 tags: [tech]
 date: 2024-06-07
 ---
