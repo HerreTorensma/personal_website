@@ -1,3 +1,4 @@
 flask
 python-frontmatter
 markdown
+gunicorn
