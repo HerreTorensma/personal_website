@@ -1,3 +1,31 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box.middle {
+    width: 60%;
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .box.middle {
+        order: 1;
+    }
+
+    .left {
+        order: 2;
+    }
+
+    .right {
+        order: 3;
+    }
+}
+
 #navbar {
     list-style-type: none;
     padding: 0;
@@ -19,14 +47,3 @@
     width: 100%;
     height: auto;
 }
-
-body {
-    margin: auto;
-    max-width: 1000px;
-    padding: 10px;
-}
-
-/* #stage {
-    width: 50%;
-    margin: 0 auto;
-} */

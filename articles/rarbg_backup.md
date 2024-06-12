@@ -1,7 +1,7 @@
 ---
-title: "rarbg.to backup"
-date: 2023-06-08
-tags: ["piracy"]
+title: rarbg.to backup
+date: 2024-06-08
+tags: [piracy]
 ---
 
 I made a Python script that generates magnet links from a sqlite database a reddit user scraped from

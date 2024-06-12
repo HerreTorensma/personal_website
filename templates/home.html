@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/static/style.css">
+		
+		<title>Home</title>
+		</head>
+		<body>
+			{% include 'navbar.html' %}
+			
+			<div class="main-container">
+				<div class="box left">
+					<h3>Most recent picture</h3>
 
-    <title>Home</title>
-</head>
-<body>
-    {% include 'navbar.html' %}
+					<img src="/static/home/crt.webp" alt="CRT monitors" width=200px>
 
-    <div id="stage">
+					<hr>
+					
+					<a href="https://landchad.net/"><img src="/static/buttons/landchad.gif" alt="landchad.net"></a>
+					<a href="https://wiby.me/"><img src="/static/buttons/wiby.gif" alt="wiby.me"></a>
 
-        <h1>tin1</h1>
+				</div>
+        
+				<div class="box middle">
+					<h1>tin1</h1>
 
-        <p>Welcome to my webpage</p>
+					<p>Welcome to my webpage</p>
 
-        <p>Interests</p>
-        <ul>
-            <li>C and assembly programming</li>
-            <li>Minimal web dev</li>
-            <li>Linux</li>
-            <li>Game development</li>
-            <li>Electronics</li>
-            <li>CRT displays</li>
-            <li>Old hardware</li>
-        </ul>
-    </div>
+					<p>Interests</p>
+					<ul>
+						<li>C and assembly programming</li>
+						<li>Minimal web dev</li>
+						<li>Linux</li>
+						<li>Game development</li>
+						<li>Electronics</li>
+						<li>CRT displays</li>
+						<li>Old hardware</li>
+					</ul>
+				</div>
 
-    <p>Latest blog posts</p>
-    <ul>
-        {% for article in articles %}
-            <li>[{{ article.date }}] <a href="{{ url_for('blog.article', slug=article.slug) }}">{{ article.title }}</a></li>
-        {% endfor %}
-
-        <li><a href="{{ url_for('blog.articles') }}">[view more]</a></li>
-    </ul>
-
-    <p>Most recent picture</p>
-
-    <a href="https://landchad.net/"><img src="/static/buttons/landchad.gif" alt="landchad.net"></a>
-    <a href="https://wiby.me/"><img src="/static/buttons/wiby.gif" alt="wiby.me"></a>
+				<div class="box right">
+					<h3>Latest blog posts</h3>
+					<ul>
+						{% for article in articles %}
+							<li>[{{ article.date }}] <a href="{{ url_for('blog.article', slug=article.slug) }}">{{ article.title }}</a></li>
+						{% endfor %}
+				
+						</ul>
+					[<a href="{{ url_for('blog.articles') }}">view more</a>]
+				</div>
+			</div>
 
     {% include 'footer.html' %}
 </body>

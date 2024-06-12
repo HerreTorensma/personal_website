@@ -1,11 +1,7 @@
 ---
-title: a test bitch
-tags: [tech, something]
-date: 2024-06-08
+title: Test post
+date: 2024-06-07
+tags: []
 ---
 
-this is a blog post
-
-### test
-
-and some
+This is a test post for the blog I programmed in Flask.
