@@ -11,7 +11,7 @@ def home():
 
 @main.route("/gallery")
 def gallery():
-    pictures_path = os.listdir("/static/gallery/images")
+    pictures_path = os.listdir("static/gallery/images")
     pictures = []
 
     metadata = []
