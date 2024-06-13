@@ -7,7 +7,7 @@ media = Blueprint("media", __name__)
 def media_page():
     # Scrape movies from IMDB
     movies = []
-    with open("static/media/movie_info.yaml") as file:
+    with open("/static/media/movie_info.yaml", "r") as file:
         movies = yaml.load(file)
 
     # ia = IMDb()
