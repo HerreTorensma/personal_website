@@ -2,3 +2,4 @@ flask
 python-frontmatter
 markdown
 gunicorn
+imdbpy

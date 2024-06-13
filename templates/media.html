@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <title>Media</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <h1>Media</h1>
+
+    <p>This page has my favorite media</p>
+
+    <h2>Movies</h2>
+
+    {% for movie in movies %}
+        <h3>{{ movie.title }} ({{ movie.year }})</h3>
+        <img src="{{ movie.cover }}" alt="">
+        <p><a href="{{ movie.url }}">IMDB</a></p>
+    {% endfor %}
+
+    <h2>Shows</h2>
+    
+    <h2>Music</h2>
+
+    {% include 'footer.html' %}
+</body>
+</html>
