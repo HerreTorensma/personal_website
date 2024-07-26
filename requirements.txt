@@ -3,3 +3,5 @@ python-frontmatter
 markdown
 gunicorn
 imdbpy
+sqlalchemy
+flask_sqlalchemy
