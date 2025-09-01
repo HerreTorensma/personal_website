@@ -10,39 +10,13 @@
 <body>
     {% include 'navbar.html' %}
 
-    <div class="main-container">
-        
-        <!-- <div class="box left"></div> -->
+    <h1>Tag: {{ tag }}</h1>
 
-        <div class="box middle">
-            <h1>Tag: {{ tag }}</h1>
-
-            <hr>
-            {% for article in articles %}
-                <h2>{{ article.title }}</h2>
-                
-                <div>Last updated on <strong>{{ article.date }}</strong></div>
-
-                <div>{{ article.content | safe }}</div>
-
-                <strong>Related:</strong>
-                {% for tag in article.tags %}
-                    <a href="{{ url_for('blog.tag', tag=tag) }}">{{ tag }}</a>
-                {% endfor %}
-                
-                <hr>
-            {% endfor %}
-        </div>
-
-        <div class="box right">
-            <strong>Quick links</strong>
-            <ul>
-            {% for article in articles %}
-                <li>[{{ article.date }}] <a href="{{ url_for('blog.article', slug=article.slug) }}">{{ article.title }}</a></li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
+    <ul>
+    {% for article in articles %}
+        <li>[{{ article.date }}] <a href="{{ url_for('blog.article', slug=article.slug) }}">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
 
     {% include 'footer.html' %}
 </body>
