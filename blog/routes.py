@@ -23,9 +23,11 @@ def article(slug):
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as file:
             article = frontmatter.load(file)
+            article.content = markdown.markdown(article.content)
             html_content = markdown.markdown(article.content)
 
             return render_template("article.html", metadata=article.metadata, content=html_content)
+            # return render_template("article.html", metadata=article.metadata)
 
     return redirect(url_for("blog.articles"))
 

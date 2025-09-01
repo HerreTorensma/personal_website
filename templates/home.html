@@ -4,40 +4,68 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/static/style.css">
-		
-		<title>Home</title>
+		<title>tin1</title>
 		</head>
 		<body>
 			{% include 'navbar.html' %}
 			
 			<div class="main-container">
 				<div class="box left">
-					<h3>Most recent picture</h3>
-
-					<img src="/static/home/crt.webp" alt="CRT monitors" width=200px>
-
-					<hr>
-					
-					<a href="https://landchad.net/"><img src="/static/buttons/landchad.gif" alt="landchad.net"></a>
-					<a href="https://wiby.me/"><img src="/static/buttons/wiby.gif" alt="wiby.me"></a>
-
+					<img src="/static/home/roses.jpg" alt="roses" width="300px">
 				</div>
         
 				<div class="box middle">
 					<h1>tin1</h1>
 
-					<p>Welcome to my website</p>
+					<strong>Read my latest blog post here ---></strong> <a href="{{ url_for('blog.article', slug=articles[0].slug) }}">{{ articles[0].title }}</a>
 
-					<p>Interests</p>
+					<p>My name is <span class="redacted">not saying it</span>, I study computer science and pay way too much rent for a tiny room.</p>
+
+					<p>
+						Currently my main creative interest is programming game engines. My current project, <a href="{{ url_for('zinc95.main') }}">zinc95</a>, is a fantasy PC inspired by programs like PICO-8 and TIC-80,
+						but with MS-DOS to Windows 95 era capabilities. I also want to get back into 3D graphics programming, but this project needs to be finished first.
+						Besides this I'm interested in lower level programming and eventually want to create my own programming language and operating system, and play around
+						some more with electronics.
+					</p>
+
+					<p>
+						I have also picked up an acoustic guitar recently, a <a href="https://www.bromoguitars.com/bat1">Bromo BAT1</a>.
+						Currently I can play these songs:
+					</p>
+
 					<ul>
-						<li>C and assembly programming</li>
-						<li>Minimal web dev</li>
-						<li>Linux</li>
-						<li>Game development</li>
-						<li>Electronics</li>
-						<li>CRT displays</li>
-						<li>Old hardware</li>
+						<li>Whiskey Is My Kind Of Lullaby (Johnny Hobo and the Freight Trains)</li>
+						<li>About a Girl (Nirvana)</li>
+						<li>Do Re Mi (Nirvana)</li>
 					</ul>
+
+					Devices I use:
+					<ul>
+						<li>Custom built desktop PC (the specs don't matter)</li>
+						<li>Google Pixel 9a with GrapheneOS</li>
+						<li>Circa 2015 Dell latitude laptop with <a href="https://archlinux.org/">Arch Linux</a> and <a href="https://dwm.suckless.org/">dwm</a> installed</li>
+						<li>2021 M1 MacBook Pro</li>
+						<li>Kobo Clara 2E</li>
+					</ul>
+
+					<p>I hold the opinion that big tech oligarchs have way too much power to hold over us and thus I like using self-hosted, DRM-free and open source stuff.</p>
+
+					<p>Here are some cool projects:</p>
+					<ul>
+						<li><a href="">PICO-8</a></li>
+						<li><a href="">TIC-80</a></li>
+						<li><a href="">Picotron</a></li>
+						<li><a href="">Bitsy</a></li>
+						<li><a href="">Godot</a></li>
+						<li><a href="">Blender</a></li>
+					</ul>
+
+					<p>Please take a look around the rest of the website using the navbar above.</p>
+
+					<a href="https://github.com/HerreTorensma/">GitHub</a>
+					<a href="https://coppercoin-games.itch.io/">Itch.io</a>
+
+					<p>email me at tin1@donthaveemailforthisyet.com</p>
 				</div>
 
 				<div class="box right">

@@ -2,4 +2,4 @@ flask
 python-frontmatter
 markdown
 gunicorn
-imdbpy
+Flask-Login

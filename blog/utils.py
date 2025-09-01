@@ -1,6 +1,23 @@
 import os
 import frontmatter
 import re
+import markdown
+# from dataclasses import dataclass
+
+# @dataclass
+# class Article:
+#     # title: string
+#     # date: string
+#     # slug: string
+#     # content: string
+
+#     def __init__(slug):
+
+
+#         self.title = 
+#         self.date
+#         self.slug = slug
+#         self.content
 
 def get_all_articles_metadata(directory):
     all_metadata = []
@@ -15,6 +32,8 @@ def get_all_articles_metadata(directory):
                 article = frontmatter.load(file)
                 article.metadata["slug"] = file_name_no_extension
                 # print(article.metadata)
+                # article.metadata.content = 
+                article.metadata["content"] = markdown.markdown(article.content)
                 all_metadata.append(article.metadata)
 
     # Sort articles by date

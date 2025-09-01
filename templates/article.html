@@ -12,23 +12,14 @@
 
     <h1>{{ metadata["title"] }}</h1>
     
-    <div>{{ metadata["date"] }}</div>
+    <div>Last updated on <strong>{{ metadata["date"] }}</strong></div>
 
     <div>{{ content | safe }}</div>
     
-    <!-- Tags:
-    <ul id="tags">
-        {% for tag in metadata["tags"] %}
-            <li><a href="{{ url_for('blog.tag', tag=tag) }}">{{ tag }}</a></li>
-        {% endfor %}
-    </ul> -->
-
-    Related
-    <div>
-        {% for tag in metadata["tags"] %}
-            <a href="{{ url_for('blog.tag', tag=tag) }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
+    <strong>Related:</strong>
+    {% for tag in metadata["tags"] %}
+        <a href="{{ url_for('blog.tag', tag=tag) }}">{{ tag }}</a>
+    {% endfor %}
 
     {% include 'footer.html' %}
 </body>

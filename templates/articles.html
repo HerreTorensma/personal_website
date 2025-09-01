@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
 
-    <title>Articles</title>
+    <title>Blog</title>
 </head>
 <body>
     {% include 'navbar.html' %}
+
+    <!-- <div class="box left">
+    {% for article in articles %}
+        <h1>{{ article.title }}</h1>
+        
+        <div>Last updated on <strong>{{ article.date }}</strong></div>
+
+        <div>{{ article.content | safe }}</div>
+
+        <hr>
+    {% endfor %}
+    </div> -->
 
     <h1>Blog</h1>
 
